@@ -3,8 +3,8 @@ require "select_city/engine"
 require "json"
 
 module SelectCity
-  # Your code goes here...
-  class << self
+    # Your code goes here...
+    class << self
         def list(parent_id = nil)
             result = []
             data
@@ -34,6 +34,14 @@ module SelectCity
                 @list[city["cityID"]] = city["city"]
             end
             @list
+        end
+
+        def city (code = '')
+            city = citys.find { |k| k["cityID"] == code}
+            p city
+            return city if city.nil?
+            province = provinces.find { |k| k["provinceID"] == city["provinceID"]}
+            return [province["province"], city["city"]]
         end
 
         private
