@@ -1,5 +1,7 @@
 # SelectCity 一个简单的城市选择插件
 
+![image](https://github.com/wangmingle/select_city/blob/master/data/eg.png)
+
 ## 简介
 
 使用 Rails Engine 给rails 添加一个省级城市选择
